@@ -1,34 +1,49 @@
 .footer-container {
-  height: 60px;
-  width: 100%;
-  background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  align-self: flex-end;
-  padding-bottom: 32px;
+  justify-content: center;
+  padding-bottom: 30px;
 }
-.light-theme-text {
-  color: #475569;
+.footer-icon-button {
+  border: none;
+  padding: 0px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  margin: 8px;
 }
-.dark-theme-text {
-  color: #f9f9f9;
+@media screen and (min-width: 768px) {
+  .footer-icon-button {
+    margin: 10px;
+  }
 }
-.contact-us-heading {
-  font-family: 'Roboto';
+.footer-icon {
+  color: #3d3c3c;
   font-size: 16px;
 }
-.responsive-footer {
-  width: 30%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .footer-icon {
+    font-size: 18px;
+  }
 }
-.footer-buttons {
-  outline: none;
-  background: none;
-  cursor: pointer;
-  border: none;
+.contact-us-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3d3c3c;
+  margin: 6px;
+}
+@media screen and (min-width: 768px) {
+  .contact-us-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Dark Theme */
+.footer-dark-text {
+  color: #ffffff;
 }

@@ -1,40 +1,81 @@
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
-import BookHubThemeContext from '../../context/BookHubThemeContext'
+import {
+  FaGoogle,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaYoutube,
+  FaPhoneSquareAlt,
+  FaWhatsappSquare,
+} from 'react-icons/fa'
+import HeaderContext from '../../context/HeaderContext'
 import './index.css'
 
 const Footer = () => (
-  <BookHubThemeContext.Consumer>
+  <HeaderContext.Consumer>
     {value => {
       const {isDarkTheme} = value
-      const textColor = !isDarkTheme ? 'light-theme-text' : 'dark-theme-text'
+
+      const footerDarkText = isDarkTheme ? 'footer-dark-text' : ''
 
       return (
         <div className="footer-container">
-          <div className="responsive-footer">
-            <button type="button" className="footer-buttons">
-              <FaGoogle className={textColor} size={20} />
-            </button>
+          <div className="icons-container">
+            <FaGoogle className={`footer-icon ${footerDarkText}`} />
 
-            <button type="button" className="footer-buttons">
-              <FaTwitter className={textColor} size={20} />
-            </button>
-            <button type="button" className="footer-buttons">
-              <a
-                href="https://instagram.com/rajashekarpodicheti?igshid=ZDdkNTZiNTM="
-                target="/"
-              >
-                <FaInstagram className={textColor} size={20} />
-              </a>
-            </button>
+            <FaPhoneSquareAlt className={`footer-icon ${footerDarkText}`} />
 
-            <button type="button" className="footer-buttons">
-              <FaYoutube className={textColor} size={20} />
-            </button>
+            <a
+              href="https://wa.me//+917093949814"
+              target="__blank"
+              rel="noopener noreferrer"
+              type="button"
+              className="footer-icon-button"
+            >
+              <FaWhatsappSquare className={`footer-icon ${footerDarkText}`} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rajashekarpodicheti/"
+              target="__blank"
+              rel="noopener noreferrer"
+              className="footer-icon-button"
+            >
+              <FaLinkedin className={`footer-icon ${footerDarkText}`} />
+            </a>
+            <a
+              href="https://github.com/rajashekarpodicheti/bookhub-mini-project-ccbp"
+              target="__blank"
+              rel="noopener noreferrer"
+              className="footer-icon-button"
+            >
+              <FaGithub className={`footer-icon ${footerDarkText}`} />
+            </a>
+            <a
+              href="https://twitter.com/Rajashekarhere?t=BQMzCD1VlckQ4mkH0N4uCg&s=09"
+              target="__blank"
+              rel="noopener noreferrer"
+              className="footer-icon-button"
+            >
+              <FaTwitter className={`footer-icon ${footerDarkText}`} />
+            </a>
+
+            <a
+              href="https://instagram.com/rajashekarpodicheti?igshid=ZDdkNTZiNTM="
+              target="__blank"
+              rel="noopener noreferrer"
+              type="button"
+              className="footer-icon-button"
+            >
+              <FaInstagram className={`footer-icon ${footerDarkText}`} />
+            </a>
+
+            <FaYoutube className={`footer-icon ${footerDarkText}`} />
           </div>
-          <p className={`contact-us-heading ${textColor}`}>Contact us</p>
+          <p className={`contact-us-text ${footerDarkText}`}>Contact us</p>
         </div>
       )
     }}
-  </BookHubThemeContext.Consumer>
+  </HeaderContext.Consumer>
 )
+
 export default Footer
